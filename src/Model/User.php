@@ -1,4 +1,6 @@
 <?php
+    namespace Model;
+    use JsonSerializable;
     class User implements JsonSerializable{
         private string $username;
         private string $password;

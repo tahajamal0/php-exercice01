@@ -1,6 +1,7 @@
 <?php
-    require __DIR__.'/../Model/UserDB.php';
-
+    namespace Controller;
+    use Model\UserDB;
+    use Model\User;
     class UserController
     {
         private $db;

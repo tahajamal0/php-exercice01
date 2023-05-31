@@ -1,7 +1,7 @@
 <?php
+    require $_SERVER["DOCUMENT_ROOT"] . '/autoloader.php';
     session_start();
-    require __DIR__.'/../Controller/UserController.php';
-    $controller = new UserController();
+    $controller = new Controller\UserController();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if(!isset($_SESSION["logged_user"])){

@@ -1,4 +1,5 @@
 <?php
+    require $_SERVER["DOCUMENT_ROOT"] . '/autoloader.php';
     session_start();
     echo "<link rel='stylesheet' href='../../static/styles/style.css'>";
 ?>

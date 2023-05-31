@@ -1,6 +1,6 @@
 <?php
-
-    require 'User.php';
+    namespace Model;
+    use Model\User;
     class UserDB{
         private $user_data;
         private $user_data_decoded;
