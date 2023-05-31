@@ -2,9 +2,11 @@
     class User implements JsonSerializable{
         private string $username;
         private string $password;
-        public function __construct(string $username, string $password) {
+        private string $role;
+        public function __construct(string $username, string $password, string $role = "0") {
             $this->username = $username;
             $this->password = $password;
+            $this->role = $role;
         }
 
         public function getUsername() : string{
@@ -22,11 +24,20 @@
             $this->password = $password;
         }
 
+        public function getRole() : string{
+            return $this->role;
+        }
+
+        public function setRole(string $role) {
+            $this->role = $role;
+        }
+
         public function jsonSerialize() : array
         {
             return [
                 'username' => $this->username,
-                'password' => $this->password
+                'password' => $this->password,
+                'role' => $this->role
             ];
         }
     }

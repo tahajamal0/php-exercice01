@@ -15,7 +15,7 @@
 
         private function InitUsers(){
             foreach ($this->user_data_decoded as $value) {
-                $this->users[] = new User($value['username'], $value['password']);
+                $this->users[] = new User($value['username'], $value['password'], $value['role']);
             }
         }
 
@@ -24,7 +24,7 @@
         }
 
         public function WriteToDB(string $user, string $password){
-            $this->users[] = new User($user, $password);
+            $this->users[] = new User($user, $password, 0);
             file_put_contents(__DIR__.'/data.json', json_encode($this->users));
         }
     }

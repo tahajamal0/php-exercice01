@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require __DIR__.'/UserController.php';
+    require __DIR__.'/../Controller/UserController.php';
     $controller = new UserController();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
