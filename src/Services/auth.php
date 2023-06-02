@@ -12,7 +12,7 @@
                 $_SESSION["logged_user"] = $user->getRole() . ";" . $user->getUsername();
                 header('Location: /');
             }else{
-                header('Location: /src/Views/signin.php');
+                header('Location: /signin');
             }
         }else{
             header('Location: /');

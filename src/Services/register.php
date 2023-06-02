@@ -8,9 +8,9 @@
             $user = $_POST["username"];
             $pass = $_POST["password"];
             if($controller->sign_up($user, $pass)){
-                header('Location: /src/Views/signin.php');
+                header('Location: /signin');
             }else{
-                header('Location: /src/Views/signup.php');
+                header('Location: /signup');
             }
         }else{
             header('Location: /');
